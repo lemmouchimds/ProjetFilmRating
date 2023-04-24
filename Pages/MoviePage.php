@@ -31,19 +31,16 @@
 <body>
 
     <?php 
-        print
-        '<img src='.$movieDetails['img'].'alt="movie poster"    
-        width="15%" height="30%>'; 
+        echo
+        ('<img src='.$movieDetails['img'].'alt="movie poster"    
+        width="15%" height="30%>'); 
     ?>
     
     <h1>
 
         <?php
-        //  $movieName = 'forrest gump';
-        //  echo $movieName;
             echo $movieDetails['name'];
         ?>
-    <!-- forrest gump -->
     </h1>
 
     <p>
@@ -52,26 +49,18 @@
         ?>
     </p>
 
-    <!-- <ul> -->
     <?php
         // foreach($movieDetails['genre'] as $genre){
         //     echo "<li>$genre</li>";
         // }
         echo $movieDetails['genre'];
     ?>
-    <!-- </ul> -->
 
     <div>year :
         <?php
             echo $movieDetails['year'];
         ?> 
-
-    </div>
-    <!-- <div>time : 
-    <?php
-        // echo $movieDetails['time'];
-    ?>
-    </div> -->
+</div>
 
      
 </body>

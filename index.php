@@ -36,11 +36,6 @@
                     <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
                         alt="" height="300" width="200" class="movie-poster">
                     <h3>
-                        <?php
-                            echo "<u>Lorem</u>";
-                            
-                        ?>
-
                         Lorem
                     </h3>
                     <p>Year: 2077</p>
