@@ -29,14 +29,7 @@
 
 </head>
 <body>
-
-    <?php 
-        echo
-        ('<img src='.$movieDetails['img'].'alt="movie poster"    
-        width="15%" height="30%>'); 
-    ?>
-    
-    <h1>
+     <h1>
 
         <?php
             echo $movieDetails['name'];
