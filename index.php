@@ -13,7 +13,8 @@
     </header>
     
     <main>
-       <a href="Pages/MoviePage.html">Forest Gump</a>
+       <a href="Pages/MoviePage.php">Forest Gump</a>
+       <a href="Pages/AddMovie.php">Ajouter</a>
         <div class="choice">
 
             <p>Quel genre d'emotions voulez-vous ressentir ?</p>
@@ -34,7 +35,14 @@
                 <div class="movie-element">
                     <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
                         alt="" height="300" width="200" class="movie-poster">
-                    <h3>Lorem</h3>
+                    <h3>
+                        <?php
+                            echo "<u>Lorem</u>";
+                            
+                        ?>
+
+                        Lorem
+                    </h3>
                     <p>Year: 2077</p>
                     <span>Rating 8/10</span>
                 </div>
