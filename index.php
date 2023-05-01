@@ -85,6 +85,7 @@
                 </div>
             </div>
         </div>
+<a href="Pages/recommendations.php">recommendations</a>
 
 
     </main>
