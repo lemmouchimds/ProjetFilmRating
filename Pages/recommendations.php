@@ -33,8 +33,8 @@
              'rating' => $_GET['rating'], 
             'genre' => $_GET['genre'], 
             'description' => $_GET['desc'],
-            'img' => $_GET['img'];
-            'acteurs' => $_GET['acteurs'];
+            'img' => $_GET['img'],
+            'acteurs' => $_GET['acteurs'],
             'realisateur' => $_GET['realisateur']];
 
 
