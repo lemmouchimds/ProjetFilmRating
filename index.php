@@ -34,13 +34,20 @@
             <div class="new-releases">
                 <br>
                 
+                
+                <?php
+                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
+                    $title1 = "Lorem";
+                    $year1 = "2013";
+                    $rating1 = "5/10";
+                ?>
+                
                 <div class="movie-element float-left">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
-                    alt="" height="300" width="200" class="movie-poster">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
                     <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2013</p>
-                        <span>Rating 5/10</span>
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
                     </div>
                 </div>
     
@@ -53,6 +60,17 @@
                         <span>Rating 7/10</span>
                     </div>
                 </div>
+                
+                <div class="movie-element float-left">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
+                    alt="" height="300" width="200" class="movie-poster">
+                    <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
+                    </div>
+                </div>
+                
             </div>
         
             <div class="suggestions">
