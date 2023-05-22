@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Film Rating</title>
 </head>
 <body>
@@ -32,15 +32,62 @@
 
         <div class="bottom-main">
             <div class="new-releases">
-                <div class="movie-element">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
-                        alt="" height="300" width="200" class="movie-poster">
-                    <h3>
-                        Lorem
-                    </h3>
-                    <p>Year: 2077</p>
-                    <span>Rating 8/10</span>
+                <br>
+                
+                <div class="movie-element float-left">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
+                    alt="" height="300" width="200" class="movie-poster">
+                    <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2013</p>
+                        <span>Rating 5/10</span>
+                    </div>
                 </div>
+    
+                <div class="movie-element float-left">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
+                    alt="" height="300" width="200" class="movie-poster">
+                    <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="suggestions">
+                <div class="movie-element float-left">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
+                    alt="" height="300" width="200" class="movie-poster">
+                    <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2022</p>
+                        <span>Rating 9/10</span>
+                    </div>
+                </div>
+                
+                <div class="movie-element float-left">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
+                    alt="" height="300" width="200" class="movie-poster">
+                    <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 1997</p>
+                        <span>Rating 10/10</span>
+                    </div>
+                </div>
+    
+                <div class="movie-element float-left">
+                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
+                    alt="" height="300" width="200" class="movie-poster">
+                    <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2010</p>
+                        <span>Rating 7.5/10</span>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <br>
                 
                 <div class="movie-element">
                     <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
