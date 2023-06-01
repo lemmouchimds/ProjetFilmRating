@@ -19,24 +19,33 @@
             <input type="text" name="name" id="name">
             <br>
             <label for="date">Date</label>
-            <input type="date" name="date" id="date">
+            <input type="text" name="date" id="date">
             <br>
-            <label for="genre">Genre</label>
-            <select name="genre" id="genre">
-                <option value="Comedie">Comedie</option>
-                <option value="Action">Action</option>
-                <option value="Romance">Romance</option>
-            </select>
+            <label for="emotion">emotion</label>
+            <select name="emotion" id="emo">
+                    <option value="melancolie">Mélancolie</option>
+                    <option value="Bonheur">Bonheur</option>
+                    <option value="Peur">Peur</option>
+                    <option value="Amour">Amour</option>
+                    <option value="Rire">Rire</option>
+                    <option value="Suspens">Suspens</option>
+                    <option value="Stupeur">Stupeur</option>
+                    <option value="Motivation">Motivation</option>
+                    <option value="Voyage">Voyage</option>
+
+                </select>
             
             <br>
-            <label for="rating">Rating</label>
-            <input type="number" name="rating" id="rating" min="0" max="5">
-            <br>
+            
             <label for="desc">Description</label>
             <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
             <br>
-            <label for="img">Image</label>
-            <input type="url" name="img" id="img">
+            <label for="affiche">affiche</label>
+            <input type="url" name="affiche" id="affiche">
+            <br>
+
+            <label for="realisateur">realisateur</label>
+            <input type="text" name="realisateur" id="realisateur">
             <br>
 
             <button type="submit">Ajouter</button>
