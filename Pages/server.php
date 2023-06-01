@@ -11,7 +11,7 @@ if (isset($_GET['titre']))
     
     $stmt = $link->prepare("INSERT INTO films (titre, affiche, emotion, annee, description, realisateur) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->bind_param("sssiss", $titre, $affiche, $emotion, $annee, $description, $realisateur);
-    $result = mysqli_query($conn, $query);
+    $result = $stmt->execute();
     header("Location: ../index.php");
     if ($result) {
         echo "Data inserted";
