@@ -35,6 +35,10 @@
 
 </head>
 <body>
+    <header>
+        <!-- return to home -->
+        <a href="./../">Back to home</a>
+    </header>
      <h1>
 
         <?php

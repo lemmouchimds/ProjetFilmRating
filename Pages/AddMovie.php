@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <a href="./../">Back to home</a>
         <h1>Ajouter un film</h1>
     </header>
     <form action="MoviePage.php">
