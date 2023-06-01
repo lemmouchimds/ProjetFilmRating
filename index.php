@@ -19,7 +19,17 @@
     
     <main>
 
+    <?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "maymovie";
 
+    $link = mysqli_connect($servername, $username, $password, $dbname);
+
+    $query = $link->prepare("select * from film");
+    
+    ?>
    
 
     <div id= "box1">
