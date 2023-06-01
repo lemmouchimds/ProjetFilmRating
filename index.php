@@ -5,29 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="style.css">
     <title>Film Rating</title>
+   
 </head>
 <body>
-    <header>
-        <h1>Film Rating</h1>
+    <header>  
+        
     </header>
     
     <main>
+
+   
+
+    <div id= "box1">
+      <p class= "entete" >
+        maymovie
+        </p>
+    </div>
+
+    
+
        <a href="Pages/MoviePage.php">Forest Gump</a>
        <a href="Pages/AddMovie.php">Ajouter</a>
         <div class="choice">
 
             <p>Quel genre d'emotions voulez-vous ressentir ?</p>
 
-            <form action="">
-                <select name="Genre" id="Genre">
-                    <option value="Comedie">Comedie</option>
-                    <option value="Action">Action</option>
-                    <option value="Romance">Romance</option>
+         
+               <div class= "select-style">
+
+
+              <form action="">
+                <select name="emotion" id="emo">
+                    <option value="melancolie">Mélancolie</option>
+                    <option value="Bonheur">Bonheur</option>
+                    <option value="Peur">Peur</option>
+                    <option value="Amour">Amour</option>
+                    <option value="Rire">Rire</option>
+                    <option value="Suspens">Suspens</option>
+                    <option value="Stupeur">Stupeur</option>
+                    <option value="Motivation">Motivation</option>
+                    <option value="Voyage">Voyage</option>
+
                 </select>
+
+                
 
                 <button type="submit">Choose</button>
             </form>
+            </div>
         </div> 
 
         <div class="bottom-main">
