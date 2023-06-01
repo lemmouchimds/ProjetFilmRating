@@ -7,6 +7,12 @@
     <title>Movie</title> <!--Movie Name-->
 
     <?php
+        if (isset($_POST['rating'])) 
+        {
+            $query = "UPDATE movies SET rating = :rating WHERE id = :id";
+        }
+
+
         if(isset($_GET['name']) && isset($_GET['date']) && isset($_GET['rating']) && isset($_GET['genre']) && isset($_GET['desc']))
         {
             
@@ -55,6 +61,12 @@
         ?> 
 </div>
 
+            <form action="" method="post">
+                <label for="">Add rating</label>
+                <input type="number" name="rating" id="rating" min="0" max="10" require>
+
+                <button type="submit">Submit</button>
+            </form>
      
 </body>
 </html>
