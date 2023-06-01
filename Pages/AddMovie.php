@@ -11,7 +11,7 @@
         <a href="./../">Back to home</a>
         <h1>Ajouter un film</h1>
     </header>
-    <form action="MoviePage.php">
+    <form action="server.php">
 
         <fieldset>
             <legend>Les information du film</legend>
