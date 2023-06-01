@@ -4,6 +4,8 @@ $username = "root";
 $password = "";
 $dbname = "films";
 
+$link = mysqli_connect($servername, $username, $password, $dbname);
+
 if (isset($_GET['titre'])) 
 {
 
