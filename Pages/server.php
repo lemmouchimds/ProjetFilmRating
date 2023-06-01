@@ -22,7 +22,7 @@ if (isset($_GET['titre']))
 
     $stmt->bind_param("sssiss", $titre, $affiche, $emotion, $annee, $description, $realisateur);
     $result = $stmt->execute();
-
+    echo $result;
     header("Location: ../index.php");
     $stmt->bind_param("sssiss", $titre, $affiche, $emotion, $annee, $description, $realisateur);
     $result = $stmt->execute();
