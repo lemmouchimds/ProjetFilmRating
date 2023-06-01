@@ -15,11 +15,11 @@
 
         <fieldset>
             <legend>Les information du film</legend>
-            <label for="name">Nom du film</label>
-            <input type="text" name="name" id="name">
+            <label for="titre">Nom du film</label>
+            <input type="text" name="titre" id="titre">
             <br>
-            <label for="date">Date</label>
-            <input type="text" name="date" id="date">
+            <label for="année">année</label>
+            <input type="text" name="année" id="année">
             <br>
             <label for="emotion">emotion</label>
             <select name="emotion" id="emo">
@@ -37,8 +37,8 @@
             
             <br>
             
-            <label for="desc">Description</label>
-            <textarea name="desc" id="desc" cols="30" rows="10"></textarea>
+            <label for="description">Description</label>
+            <textarea name="description" id="description" cols="30" rows="10"></textarea>
             <br>
             <label for="affiche">affiche</label>
             <input type="url" name="affiche" id="affiche">
