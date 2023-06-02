@@ -34,9 +34,16 @@
   <div class="film">
 
     <?php
-      $emotion = $GET['emotion'];
+      $emotion = $_GET['emotion'];
 
-      $query = "SELECT * FROM movies WHERE genre = '$emotion'";
+      $query = "SELECT * FROM films WHERE emotion = '$emotion'";
+
+      $host = "localhost";
+      $dbuser = "root";
+      $dbpass = "";
+      $dbname = "maymovie";
+
+      $conn = mysqli_connect($host, $dbuser, $dbpass, $dbname);
 
       $result = mysqli_query($conn, $query);
       $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -47,10 +54,10 @@
     <?php
     foreach($data as $movie){
       echo "<div class='movie'>";
-      echo "<h2>".$movie['name']."</h2>";
-      echo "<img src='".$movie['img']."' alt='Poster de ".$movie['name']."'>";
+      echo "<h2>".$movie['titre']."</h2>";
+      echo "<img src='".$movie['affiche']."' alt='Poster de ".$movie['titre']."' width=300 height=450>";
       echo "<p>".$movie['description']."</p>";
-      echo "<a href='movie.php?name=".$movie['name']."&date=".$movie['date']."&rating=".$movie['rating']."&genre=".$movie['genre']."&desc=".$movie['description']."&img=".$movie['img']."&acteurs=".$movie['acteurs']."&realisateur=".$movie['realisateur']."'>voir plus</a>";
+      echo "<a href='moviepage.php?name=".$movie['titre']."'>voir plus</a>";
       echo "</div>";
     }
     ?>

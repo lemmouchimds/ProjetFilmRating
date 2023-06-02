@@ -95,7 +95,7 @@ button:hover {
     background-image: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance:;
+    /* appearance:; */
 }
 
 .select-style:after {

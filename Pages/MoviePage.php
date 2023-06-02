@@ -7,37 +7,66 @@
     <title>Movie</title> <!--Movie Name-->
 
     <?php
-        if (isset($_POST['rating'])) 
+        if(isset($_GET['name']))
+        // && isset($_GET['année']) && isset($_GET['rating']) && isset($_GET['emotion']) && isset($_GET['description'])  && isset($_GET['realisateur'])  && isset($_GET['affiche'])  && isset($_GET['nbvisite']))
         {
-            $query = "UPDATE movies SET rating = :rating WHERE id = :id";
-        }
+            $titre = $_GET['name'];
+            $query = "SELECT * FROM films WHERE titre = '$titre'";
 
+            $host = "localhost";
+            $dbuser = "root";
+            $dbpass = "";
+            $dbname = "maymovie";
 
-        if(isset($_GET['titre']) && isset($_GET['année']) && isset($_GET['rating']) && isset($_GET['emotion']) && isset($_GET['description'])  && isset($_GET['realisateur'])  && isset($_GET['affiche'])  && isset($_GET['nbvisite']))
-        {
-            
-            $movieDetails = ['titre' => $_GET['titre'], 
-            'année' => $_GET['année'],
-             'rating' => $_GET['rating'], 
-            'emotion' => $_GET['emotion'],
-            'realisateur' => $_GET['realisateur'],
-            'nbvisite' => $_GET['nbvisite'], 
-            'description' => $_GET['description'],
-            'affiche' => $_GET['affiche']];
+            $conn = mysqli_connect($host, $dbuser, $dbpass, $dbname);
+
+            $result = mysqli_query($conn, $query);
+            $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+            //print_r($data);
+
+            if (empty($data)) {
+                header("Location: MovieDoesNotExist.html"); // replace error.php with the name of the page you want to redirect to
+                exit(); // make sure to exit the script after the redirect
+            }
+
+            $movieDetails = [
+                'titre' => $data[0]['titre'], 
+                'annee' => $data[0]['année'],
+                'rating' => $data[0]['rating'], 
+                'emotion' => $data[0]['emotion'],
+                'realisateur' => $data[0]['realisateur'],
+                'nbvisite' => $data[0]['nbvisite'], 
+                'description' => $data[0]['description'],
+                'affiche' => $data[0]['affiche']
+            ];
+            //$data[0];
 
         }
         else
         {
-
-            echo 'error';
-
-            $movieDetails = ['name' => 'Forrest Gump', 
-            'year' => 1997, 'rating' => '5', 
-            'time' => '2h 22min',
-            'genre' => 'Drame', 
-            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, ratione. Incidunt vel repudiandae rem aspernatur at optio excepturi labore expedita fuga tempore, quas voluptatem eveniet similique voluptate aut quisquam illum!',
-            'img' => "https://th.bing.com/th/id/R.7c0a795e1741324dcdd0e87c51c8bd0f?rik=vFCUAh6jM8sHmg&pid=ImgRaw&r=0"];
+            header("Location: MovieDoesNotExist.html"); 
+            exit(); // make sure to exit the script after the redirect
         }
+
+        if (isset($_POST['rating'])) 
+        {
+            // $query = "UPDATE movies SET rating = :rating WHERE id = :id";
+
+            $currentRate = $movieDetails['rating'];
+            $currentNbVisite = $movieDetails['nbvisite'];
+
+            $newRate = ($_POST['rating'] + ($currentRate * $currentNbVisite)) / ($currentNbVisite + 1);
+
+            $stmt = $conn->prepare("UPDATE films SET rating = ?, nbvisite = ? WHERE titre = ?");
+
+            $currentNbVisitet = $currentNbVisite + 1;
+            $stmt->bind_param("iis", $newRate, $currentNbVisite, $movieDetails['titre']);
+            $result = $stmt->execute();
+
+        }
+
+
         ?>
 
 </head>
@@ -46,13 +75,17 @@
         <!-- return to home -->
         <a href="./../">Back to home</a>
     </header>
-     <h1>
-
+    <h1>
+        
         <?php
-            echo $movieDetails['name'];
-        ?>
+            echo $movieDetails['titre'];
+            ?>
     </h1>
 
+    <div>
+        <img src="<?php echo $movieDetails['affiche']; ?>" alt="" width="300" height="450">
+    </div>
+    
     <p>
         <?php
             echo $movieDetails['description'];
@@ -60,24 +93,27 @@
     </p>
 
     <?php
-        // foreach($movieDetails['genre'] as $genre){
-        //     echo "<li>$genre</li>";
-        // }
-        echo $movieDetails['genre'];
+        echo $movieDetails['emotion'];
     ?>
 
     <div>year :
         <?php
-            echo $movieDetails['year'];
+            echo $movieDetails['annee'];
         ?> 
-</div>
+    </div>
 
-            <form action="" method="post">
-                <label for="">Add rating</label>
-                <input type="number" name="rating" id="rating" min="0" max="10" require>
+    <form method="Post">
+        <label for="">Add rating</label>
+        <input type="number" name="rating" id="rating" min="0" max="10" require>
 
-                <button type="submit">Submit</button>
-            </form>
-     
+        <button type="submit">Submit</button>
+    </form>
+
+    <div>
+        current Rating : <?php echo $movieDetails['rating']; ?>
+        <br>
+        from : <?php echo $movieDetails['nbvisite']; ?> votes 
+    </div>
+    
 </body>
 </html>
