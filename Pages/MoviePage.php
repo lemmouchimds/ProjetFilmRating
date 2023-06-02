@@ -56,14 +56,13 @@
             $currentRate = $movieDetails['rating'];
             $currentNbVisite = $movieDetails['nbvisite'];
 
-            $newRate = ($_POST['rating'] + ($currentRate * $currentNbVisite)) / ($currentNbVisite + 1);
+            $newRate = (($_POST['rating'] + ($currentRate * $currentNbVisite)) / ($currentNbVisite + 1));
+            $currentNbVisite = $currentNbVisite + 1;
 
             $stmt = $conn->prepare("UPDATE films SET rating = ?, nbvisite = ? WHERE titre = ?");
 
-            $currentNbVisitet = $currentNbVisite + 1;
             $stmt->bind_param("iis", $newRate, $currentNbVisite, $movieDetails['titre']);
             $result = $stmt->execute();
-
         }
 
 
@@ -114,6 +113,8 @@
         <br>
         from : <?php echo $movieDetails['nbvisite']; ?> votes 
     </div>
+    
+
     
 </body>
 </html>
