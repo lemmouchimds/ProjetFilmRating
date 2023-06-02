@@ -13,11 +13,12 @@
    
 </head>
 <body>
-    <header>  
-        maymovie
-    </header>
-    
+   
     <main>
+
+    <img src="Pages\01_06_2023 1_15_38 PM.png" alt="logo maymovie" width=100% >
+
+
 
     <?php
     $servername = "localhost";
@@ -27,12 +28,12 @@
 
     $link = mysqli_connect($servername, $username, $password, $dbname);
 
-    $query = $link->prepare("select * from film");
-    
+    $query = $link->prepare("select * from films");
+    mysqli_close($link);
     ?>
    
 
-    <div id= "box1">
+    
         
     </div>
 
