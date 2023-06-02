@@ -13,17 +13,24 @@
         }
 
 
-        if(isset($_GET['name']) && isset($_GET['date']) && isset($_GET['rating']) && isset($_GET['genre']) && isset($_GET['desc']))
+        if(isset($_GET['titre']) && isset($_GET['année']) && isset($_GET['rating']) && isset($_GET['emotion']) && isset($_GET['description'])  && isset($_GET['realisateur'])  && isset($_GET['affiche'])  && isset($_GET['nbvisite']))
         {
             
-            $movieDetails = ['name' => $_GET['name'], 
-            'year' => $_GET['date'], 'rating' => $_GET['rating'], 
-            'genre' => $_GET['genre'], 
-            'description' => $_GET['desc'],
-            'img' => $_GET['img']];
+            $movieDetails = ['titre' => $_GET['titre'], 
+            'année' => $_GET['année'],
+             'rating' => $_GET['rating'], 
+            'emotion' => $_GET['emotion'],
+            'realisateur' => $_GET['realisateur'],
+            'nbvisite' => $_GET['nbvisite'], 
+            'description' => $_GET['description'],
+            'affiche' => $_GET['affiche']];
+
         }
         else
         {
+
+            echo 'error';
+
             $movieDetails = ['name' => 'Forrest Gump', 
             'year' => 1997, 'rating' => '5', 
             'time' => '2h 22min',

@@ -12,6 +12,7 @@ if (isset($_GET['titre']))
     //$query = "insert into films (titre, annee, rating, emotion, description, affciche, realisateur) values (?,?,?,?,?,?) ";
     
     $stmt = $link->prepare("INSERT INTO films (titre, affiche, emotion, année, description, realisateur) VALUES (?, ?, ?, ?, ?, ?)");
+      
     
     $titre = $_GET['titre'];
     $affiche = $_GET['affiche'];

@@ -13,9 +13,13 @@
    
     <main>
 
-    <img src="Pages\01_06_2023 1_15_38 PM.png" alt="logo maymovie" width=100% >
+    
 
+<div class="entete">  
+      <img src="Pages\02_06_2023 7_27_51 PM.png" alt="logo maymovie" width=30% >
+</div>
 
+          
 
     <?php
     $servername = "localhost";
@@ -32,24 +36,50 @@
 
     
         
-    </div>
+
 
     
 
-       <a href="Pages/MoviePage.php">Forest Gump</a>
-       <a href="Pages/AddMovie.php">Ajouter</a>
-        <div class="choice">
+      
+       <div class="ajouter">
 
-            <p>Quel genre d'emotions voulez-vous ressentir ?</p>
+       <form action="Pages\AddMovie.php">
+        <button type="submit">AJOUTER UN FILM</button>
+       </form>
+
+       </div>
+       
+       <br>
+       <br>
+       <br>
+       <br> 
+       <br>
+       <h1>
+               <center> QUEL GENRE D'EMOTION VOULEZ-VOUS RESSENTIR ?</center>
+            </h1>
+
+       <div class="choice">
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
 
          
-               <div class= "select-style">
+         <div class= "select-style">
+ 
 
-
-              <form action="./Pages/recommendations.php" method=GET>
-                <select name="emotion" id="emo">
-                    <option value="melancolie">Mélancolie</option>
-                    <option value="Bonheur">Bonheur</option>
+           <form action="./Pages/recommendations.php" method=GET>
+                 
+                  <select name="emotion" id="emo">
+                  
+                   <option value="Bonheur">Bonheur</option>
+                    <option value="melancolie" >Mélancolie</option>
                     <option value="Peur">Peur</option>
                     <option value="Amour">Amour</option>
                     <option value="Rire">Rire</option>
@@ -58,17 +88,51 @@
                     <option value="Motivation">Motivation</option>
                     <option value="Voyage">Voyage</option>
 
-                </select>
+                   </select>
 
-                
 
-                <button type="submit">Choose</button>
+                   <br><br><br>
+                   <div class="choose">
+                <button type="submit"  >Choisir</button>
+                </div>
+         </div>
+
+               
+               
+               
+
             </form>
-            </div>
+            
         </div> 
 
+
+
+<br>
+<br>
+<br><br>
+<br><br><br><br><br>
+<br><br><br><br><br>
+
+<div class="box">
+ 
+</div>
+
+<br>
+<div class="box">
+ 
+</div>
+
+
+<div class="trs">
+<h1>SUGGESTIONS PAR GENRE/CATEGORIE :</h1>
+</div>
         <div class="bottom-main">
-            <div class="new-releases">
+            <div class="sorties recentes">
+
+            <br>
+            <br>
+            <h2>SORTIES RECENTES :</h2>
+
                 <br>
                 
                 
@@ -80,7 +144,9 @@
                 ?>
                 
                 <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
                     <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
                     <div class="movie-info">
                         <h3><?php echo $title1; ?></h3>
                         <p>Year: <?php echo $year1; ?></p>
@@ -89,9 +155,10 @@
                 </div>
     
                 <div class="movie-element float-left">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
-                    alt="" height="300" width="200" class="movie-poster">
-                    <div class="movie-info">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                  </a>
+                  <div class="movie-info">
                         <h3>Lorem</h3>
                         <p>Year: 2017</p>
                         <span>Rating 7/10</span>
@@ -99,9 +166,10 @@
                 </div>
                 
                 <div class="movie-element float-left">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
-                    alt="" height="300" width="200" class="movie-poster">
-                    <div class="movie-info">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
                         <h3>Lorem</h3>
                         <p>Year: 2017</p>
                         <span>Rating 7/10</span>
@@ -109,83 +177,212 @@
                 </div>
                 
             </div>
+
+
+            <div class="plus appreciés">
+
+<br>
+<br>
+<h2>PLUS APPRECIES :</h2>
+
+    <br>
+    
+    
+    <?php
+        $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
+        $title1 = "Lorem";
+        $year1 = "2013";
+        $rating1 = "5/10";
+    ?>
+    
+    <div class="movie-element float-left">
+    <a href="Pages/MoviePage.php">
+        <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+     </a>
+        <div class="movie-info">
+            <h3><?php echo $title1; ?></h3>
+            <p>Year: <?php echo $year1; ?></p>
+            <span>Rating <?php echo $rating1; ?></span>
+        </div>
+    </div>
+
+    <div class="movie-element float-left">
+    <a href="Pages/MoviePage.php">
+        <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+      </a>
+      <div class="movie-info">
+            <h3>Lorem</h3>
+            <p>Year: 2017</p>
+            <span>Rating 7/10</span>
+        </div>
+    </div>
+    
+    <div class="movie-element float-left">
+    <a href="Pages/MoviePage.php">
+        <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+     </a>
+     <div class="movie-info">
+            <h3>Lorem</h3>
+            <p>Year: 2017</p>
+            <span>Rating 7/10</span>
+        </div>
+    </div>
+    
+</div>
+
         
-            <div class="suggestions">
+
+            <div class="animation">
+                <br>
+                
+                <h2>ANIMATION :</h2>
+                <br>
+                
+                <?php
+                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
+                    $title1 = "Lorem";
+                    $year1 = "2013";
+                    $rating1 = "5/10";
+                ?>
+                
                 <div class="movie-element float-left">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
-                    alt="" height="300" width="200" class="movie-poster">
-                    <div class="movie-info">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
+                    </div>
+                </div>
+    
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
                         <h3>Lorem</h3>
-                        <p>Year: 2022</p>
-                        <span>Rating 9/10</span>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
                     </div>
                 </div>
                 
                 <div class="movie-element float-left">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
-                    alt="" height="300" width="200" class="movie-poster">
-                    <div class="movie-info">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
                         <h3>Lorem</h3>
-                        <p>Year: 1997</p>
-                        <span>Rating 10/10</span>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
+                    </div>
+                </div>
+                
+            </div>
+
+
+
+
+            <div class="action">
+                <br>
+                
+                <h2>ACTION :</h2>
+
+                <br>
+                
+                <?php
+                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
+                    $title1 = "Lorem";
+                    $year1 = "2013";
+                    $rating1 = "5/10";
+                ?>
+                
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
                     </div>
                 </div>
     
                 <div class="movie-element float-left">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg" 
-                    alt="" height="300" width="200" class="movie-poster">
-                    <div class="movie-info">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
                         <h3>Lorem</h3>
-                        <p>Year: 2010</p>
-                        <span>Rating 7.5/10</span>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
                     </div>
                 </div>
-            </div>
-            </div>
-            <br>
                 
-                <div class="movie-element">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
-                    alt="" height="300" width="200" class="movie-poster">
-                    <h3>Lorem</h3>
-                    <p>Year: 2013</p>
-                    <span>Rating 5/10</span>
-                </div>
-    
-                <div class="movie-element">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
-                    alt="" height="60" width="30" class="movie-poster">
-                    <h3>Lorem</h3>
-                    <p>Year: 2017</p>
-                    <span>Rating 7/10</span>
-                </div>
-            </div>
-    
-            <div class="suggestions">
-                <div class="movie-element">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
-                    alt="" height="60" width="30" class="movie-poster">
-                    <h3>Lorem</h3>
-                    <p>Year: 2022</p>
-                    <span>Rating 9/10</span>
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
+                    </div>
                 </div>
                 
-                <div class="movie-element">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
-                    alt="" height="60" width="30" class="movie-poster">
-                    <h3>Lorem</h3>
-                    <p>Year: 1997</p>
-                    <span>Rating 10/10</span>
+            </div>
+
+            <div class="sf">
+                <br>
+                
+                <h2>SCIENCE FICTION :</h2>
+
+                <br>
+                
+                <?php
+                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
+                    $title1 = "Lorem";
+                    $year1 = "2013";
+                    $rating1 = "5/10";
+                ?>
+                
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
+                    </div>
                 </div>
     
-                <div class="movie-element">
-                    <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg?ts=1637015653" 
-                    alt="" height="60" width="30" class="movie-poster">
-                    <h3>Lorem</h3>
-                    <p>Year: 2010</p>
-                    <span>Rating 7.5/10</span>
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
+                    </div>
                 </div>
+                
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3>Lorem</h3>
+                        <p>Year: 2017</p>
+                        <span>Rating 7/10</span>
+                    </div>
+                </div>
+                
             </div>
+
+
+
         </div>
 <a href="Pages/recommendations.php">recommendations</a>
 
