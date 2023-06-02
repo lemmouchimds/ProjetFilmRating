@@ -12,16 +12,66 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-position:top;
-    background-color: rgb(208, 201, 201); 
+    background-color: rgb(72, 6, 6); 
 } 
   
-
+#box1 {
+    background-color: rgb(15, 14, 13);
+    position: relative; top: 0px;  
+    height: 250px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+         
+    
+}
     
 
-emotion{
-    background-color: blueviolet;
+
+
+.select-style {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    width: 120px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: rebeccapurple;
+    background: red;
+    position: relative;
 }
 
+.select-style select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.select-style:after {
+    top: 50%;
+    left: 85%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 5px;
+    margin-top: -2px;
+    z-index: 100;
+}
+
+.select-style select:focus {
+    outline: none;
+}
 
 
     h3{
@@ -31,7 +81,14 @@ emotion{
      font-size: 1.4em;
     }
 
+header{
 
+    color: blue;
+    text-align: center;
+        font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
 
 .movie-element 
 {

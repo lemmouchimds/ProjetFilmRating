@@ -5,11 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <meta name="description" content="maymovie est un site web qui vous permet de trouver des films en fonction de vos émotions.">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="style.css">
-    <title>Film Rating</title>
+    <meta name="description" content="maymovie est un site web qui vous permet de trouver des films en fonction de votre humeur et le genre d'émotion que vous voulez vivres.">
+   <title>Film Rating</title>
    
 </head>
 <body>
