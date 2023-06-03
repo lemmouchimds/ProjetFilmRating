@@ -30,7 +30,7 @@
     $link = mysqli_connect($servername, $username, $password, $dbname);
 
     $query = $link->prepare("select * from films");
-    mysqli_close($link);
+    //mysqli_close($link);
     ?>
    
 
@@ -137,10 +137,19 @@
                 
                 
                 <?php
-                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
-                    $title1 = "Lorem";
-                    $year1 = "2013";
-                    $rating1 = "5/10";
+
+                    $query = "select * from films order by année desc limit 3";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];//"https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+                    // $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
+                    // $title1 = "Lorem";
+                    // $year1 = "2013";
+                    // $rating1 = "5/10";
                 ?>
                 
                 <div class="movie-element float-left">
@@ -156,23 +165,23 @@
     
                 <div class="movie-element float-left">
                 <a href="Pages/MoviePage.php">
-                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                    <img src="<?php echo $data[1]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
                   </a>
                   <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
+                        <h3><?php echo $data[1]['titre'];?></h3>
+                        <p>Year: <?php echo $data[1]['année'];?></p>
+                        <span>Rating <?php echo $data[1]['rating']?>/10</span>
                     </div>
                 </div>
                 
                 <div class="movie-element float-left">
                 <a href="Pages/MoviePage.php">
-                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
-                 </a>
-                 <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
+                    <img src="<?php echo $data[2]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
+                  </a>
+                  <div class="movie-info">
+                        <h3><?php echo $data[2]['titre'];?></h3>
+                        <p>Year: <?php echo $data[2]['année'];?></p>
+                        <span>Rating <?php echo $data[2]['rating']?>/10</span>
                     </div>
                 </div>
                 
@@ -189,16 +198,20 @@
     
     
     <?php
-        $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
-        $title1 = "Lorem";
-        $year1 = "2013";
-        $rating1 = "5/10";
+        $query = "select * from films order by rating desc limit 3";
+        $result = mysqli_query($link, $query);
+        $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+        $poster1 = $data[0]['affiche'];
+        $title1 = $data[0]['titre'];
+        $year1 = $data[0]['année'];
+        $rating1 = $data[0]['rating']."/10";
     ?>
     
     <div class="movie-element float-left">
     <a href="Pages/MoviePage.php">
         <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
-     </a>
+        </a>
         <div class="movie-info">
             <h3><?php echo $title1; ?></h3>
             <p>Year: <?php echo $year1; ?></p>
@@ -208,26 +221,26 @@
 
     <div class="movie-element float-left">
     <a href="Pages/MoviePage.php">
-        <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
-      </a>
-      <div class="movie-info">
-            <h3>Lorem</h3>
-            <p>Year: 2017</p>
-            <span>Rating 7/10</span>
+        <img src="<?php echo $data[1]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
+        </a>
+        <div class="movie-info">
+            <h3><?php echo $data[1]['titre'];?></h3>
+            <p>Year: <?php echo $data[1]['année'];?></p>
+            <span>Rating <?php echo $data[1]['rating']?>/10</span>
         </div>
     </div>
     
     <div class="movie-element float-left">
     <a href="Pages/MoviePage.php">
-        <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
-     </a>
-     <div class="movie-info">
-            <h3>Lorem</h3>
-            <p>Year: 2017</p>
-            <span>Rating 7/10</span>
+        <img src="<?php echo $data[2]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
+        </a>
+        <div class="movie-info">
+            <h3><?php echo $data[2]['titre'];?></h3>
+            <p>Year: <?php echo $data[2]['année'];?></p>
+            <span>Rating <?php echo $data[2]['rating']?>/10</span>
         </div>
     </div>
-    
+
 </div>
 
         
