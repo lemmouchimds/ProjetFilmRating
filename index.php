@@ -153,7 +153,7 @@
                 ?>
                 
                 <div class="movie-element float-left">
-                <a href="Pages/MoviePage.php">
+                <a href="<?php echo "Pages/MoviePage.php?name=".$data[0]['titre'];?>">
                     <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
                  </a>
                     <div class="movie-info">
@@ -164,7 +164,7 @@
                 </div>
     
                 <div class="movie-element float-left">
-                <a href="Pages/MoviePage.php">
+                <a href="<?php echo "Pages/MoviePage.php?name=".$data[1]['titre'];?>">
                     <img src="<?php echo $data[1]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
                   </a>
                   <div class="movie-info">
@@ -175,7 +175,7 @@
                 </div>
                 
                 <div class="movie-element float-left">
-                <a href="Pages/MoviePage.php">
+                <a href="<?php echo "Pages/MoviePage.php?name=".$data[2]['titre'];?>">
                     <img src="<?php echo $data[2]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
                   </a>
                   <div class="movie-info">
@@ -209,7 +209,7 @@
     ?>
     
     <div class="movie-element float-left">
-    <a href="Pages/MoviePage.php">
+    <a href="<?php echo "Pages/MoviePage.php?name=".$data[0]['titre'];?>">
         <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
         </a>
         <div class="movie-info">
@@ -220,7 +220,7 @@
     </div>
 
     <div class="movie-element float-left">
-    <a href="Pages/MoviePage.php">
+    <a href="<?php echo "Pages/MoviePage.php?name=".$data[1]['titre'];?>">
         <img src="<?php echo $data[1]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
         </a>
         <div class="movie-info">
@@ -231,7 +231,7 @@
     </div>
     
     <div class="movie-element float-left">
-    <a href="Pages/MoviePage.php">
+    <a href="<?php echo "Pages/MoviePage.php?name=".$data[2]['titre'];?>">
         <img src="<?php echo $data[2]['affiche']; ?>" alt="" height="300" width="200" class="movie-poster">
         </a>
         <div class="movie-info">
