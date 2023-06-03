@@ -250,12 +250,19 @@
                 
                 <h2>ANIMATION :</h2>
                 <br>
+
                 
                 <?php
-                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
-                    $title1 = "Lorem";
-                    $year1 = "2013";
-                    $rating1 = "5/10";
+                    $query = "select * from films where titre = 'spirited away'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
                 ?>
                 
                 <div class="movie-element float-left">
@@ -269,28 +276,59 @@
                     </div>
                 </div>
     
-                <div class="movie-element float-left">
-                <a href="Pages/MoviePage.php">
-                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
-                 </a>
-                 <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
-                    </div>
-                </div>
+
+
+                <?php
+                    $query = "select * from films where titre = 'porco rosso'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
+                ?>
                 
                 <div class="movie-element float-left">
                 <a href="Pages/MoviePage.php">
                     <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
                  </a>
                  <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
                     </div>
                 </div>
+
+
+
+                <?php
+                    $query = "select * from films where titre = 'paddington'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
+                ?>
                 
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
+                    </div>
+                </div>
+
+
             </div>
 
 
@@ -304,10 +342,16 @@
                 <br>
                 
                 <?php
-                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
-                    $title1 = "Lorem";
-                    $year1 = "2013";
-                    $rating1 = "5/10";
+                    $query = "select * from films where titre = 'american psycho'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
                 ?>
                 
                 <div class="movie-element float-left">
@@ -320,29 +364,58 @@
                         <span>Rating <?php echo $rating1; ?></span>
                     </div>
                 </div>
-    
-                <div class="movie-element float-left">
-                <a href="Pages/MoviePage.php">
-                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
-                 </a>
-                 <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
-                    </div>
-                </div>
+
+
+                <?php
+                    $query = "select * from films where titre = 'Top Gun Maverick'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
+                ?>
                 
                 <div class="movie-element float-left">
                 <a href="Pages/MoviePage.php">
                     <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
                  </a>
                  <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
                     </div>
                 </div>
+
+
+                <?php
+                    $query = "select * from films where titre = 'drive'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
+                ?>
                 
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
+                    </div>
+                </div>
+
+
             </div>
 
             <div class="sf">
@@ -353,10 +426,16 @@
                 <br>
                 
                 <?php
-                    $poster1 = "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/iron-man-poster-design-template-4f96ce479d1d35073cde5fa174b74f4d_screen.jpg";
-                    $title1 = "Lorem";
-                    $year1 = "2013";
-                    $rating1 = "5/10";
+                    $query = "select * from films where titre = ' Blade Runner 2049'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
                 ?>
                 
                 <div class="movie-element float-left">
@@ -369,28 +448,57 @@
                         <span>Rating <?php echo $rating1; ?></span>
                     </div>
                 </div>
-    
-                <div class="movie-element float-left">
-                <a href="Pages/MoviePage.php">
-                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
-                 </a>
-                 <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
-                    </div>
-                </div>
+
+
+                <?php
+                    $query = "select * from films where titre = 'the batman'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
+                ?>
                 
                 <div class="movie-element float-left">
                 <a href="Pages/MoviePage.php">
                     <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
                  </a>
                  <div class="movie-info">
-                        <h3>Lorem</h3>
-                        <p>Year: 2017</p>
-                        <span>Rating 7/10</span>
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
                     </div>
                 </div>
+
+                <?php
+                    $query = "select * from films where titre = 'Paddington'";
+                    $result = mysqli_query($link, $query);
+                    $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+                    $poster1 = $data[0]['affiche'];
+                    $title1 = $data[0]['titre'];
+                    $year1 = $data[0]['année'];
+                    $rating1 = $data[0]['rating']."/10";
+
+                   
+                ?>
+                
+                <div class="movie-element float-left">
+                <a href="Pages/MoviePage.php">
+                    <img src="<?php echo $poster1; ?>" alt="" height="300" width="200" class="movie-poster">
+                 </a>
+                 <div class="movie-info">
+                        <h3><?php echo $title1; ?></h3>
+                        <p>Year: <?php echo $year1; ?></p>
+                        <span>Rating <?php echo $rating1; ?></span>
+                    </div>
+                </div>
+
+
                 
             </div>
 
